@@ -1,0 +1,143 @@
+header {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../imagenes/Logoanimafo.gif);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: rgb(223, 211, 54);
+    object-fit: cover;
+    border-bottom: 5px solid grey;
+
+
+    .titulo {
+        size: 20px;
+    }
+
+    .logo {
+        size: 100%;
+        height: 150px;
+        width: 150px;
+        margin-top: 50px;
+    }
+
+    .tituloLogo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        row-gap: 10px;
+    }
+
+    .navbar {
+        margin-top: 100px;
+        background-color: #424240;
+        border: 2px solid rgb(223, 211, 54);
+        position: relative;z-index: 1;
+        .navbar-brand{
+            color: rgb(179, 68, 68);
+            background-color: rgb(19, 16, 16);
+            height: 50px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
+        .collapse {
+            .nav-item {
+                a {
+                    color: rgb(223, 211, 54);
+                }
+            }
+
+            .navbar-brand {
+                color: rgb(223, 211, 54);
+            }
+
+            .dropdown-menu {
+                background-color: #424240;
+
+
+            }
+        }
+    }
+
+    /*.navUno--modificador {
+        .sectorUno__caja--propiedades {
+
+            justify-content: auto;
+            align-items: none;
+
+
+            list-style: none;
+            background-color: rgb(66, 66, 65);
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            height: 60px;
+            margin-top: 40px;
+
+
+
+            li {
+                list-style: none;
+                cursor: pointer;
+                padding: 20px;
+                transition: all 0.3s ease 0s;
+                font-style: italic;
+                text-decoration: rgb(223, 211, 54);
+
+
+                &:hover {
+                    background-color: rgb(151, 153, 143);
+                }
+
+                >p {
+                    list-style: none;
+                    text-decoration: none;
+                    color: rgb(223, 211, 54);
+                }
+            }
+
+            .nav__opcion--modificador {
+
+
+                &:hover>.sectorDos--modificador {
+                    display: block;
+                }
+            }
+
+            .sectorDos--modificador {
+                position: absolute;
+                transform: translateY(20px);
+                display: none;
+                margin-top: -20px;
+                margin-left: -40px;
+
+                li {
+                    border-bottom: solid 1px rgb(116, 113, 113);
+                    text-align: center;
+                    background-color: rgb(163, 163, 163);
+                    padding: 20px;
+                    width: 120px;
+                    transform: translateX(-20px);
+
+
+                    &:hover {
+                        background-color: rgb(84, 85, 81);
+
+
+                    }
+
+                    >a {
+                        list-style: none;
+                        text-decoration: none;
+                        color: rgb(223, 211, 54);
+                    }
+                }
+            }
+        }
+    }*/
+}

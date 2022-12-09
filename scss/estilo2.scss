@@ -1,0 +1,426 @@
+@import "header";
+@import "footer";
+@import "variables";
+
+
+@mixin servicios {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(78, 42, 49, 1) 100%);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+@mixin proveedor {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(78, 42, 49, 1) 100%);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin necesidad {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(78, 42, 49, 1) 100%);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+
+@mixin imagenes {
+    width: 370px;
+    border: none;
+    height: 150px;
+
+}
+
+
+$servicios: (background: black,
+    aling: center,
+
+);
+
+
+
+body {
+    background-image: url("https://fondosmil.com/fondo/10863.jpg");
+    height: auto;
+    width: 100%;
+    color: rgb(243, 233, 233);
+    min-width: 900px;
+    display: block;
+
+    main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 170px;
+
+        .secUno--modificador {
+            display: flex;
+            margin-top: 50px;
+            border: 5px solid rgb(148, 184, 65);
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+
+            .carousel-inner img {
+                height: 350px;
+                width: 100%;
+
+            }
+
+
+        }
+
+        .secDos--modificador {
+            width: 100%;
+            height: 350px;
+            display: flex;
+            border: gray solid 2px;
+            margin-top: 200px;
+            
+            flex-direction: column;
+            align-items: center;
+
+            .boxNecesidades--modificador {
+                display: flex;
+                width: 90%;
+                height: 150px*2;
+                /*border: 2px gray solid;*/
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 30px;
+
+                .necesidadUno,
+                .necesidadDos,
+                .necesidadTres {
+
+                    display: flex;
+                    flex-direction: column;
+                    width: 380px;
+                    height: 280px;
+                    border: 2px solid gray;
+                    padding: 5px;
+
+                    h3 {
+
+                        color: $color1;
+                        font-family: $tipoletra1;
+                    }
+
+
+                    p {
+                        color: black;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: purple;
+
+
+                    }
+                }
+
+                .necesidadUno {
+                    @include necesidad()
+                }
+
+                .necesidadUno>img {
+                    @include imagenes()
+                }
+
+                .necesidadDos {
+                    @include necesidad()
+                }
+
+                .necesidadDos>img {
+                    @include imagenes()
+                }
+
+                .necesidadTres {
+                    @include necesidad()
+                }
+
+                .necesidadTres>img {
+                    @include imagenes()
+                }
+            }
+
+        }
+
+        .secTres--modificador {
+            width: 100%;
+            height: 200px*2;
+            display: flex;
+            border: grey 2px solid;
+
+            margin-top: 13rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .secTres__boxProvedores--modificador {
+                display: flex;
+                width: 100%;
+                height: 350px;
+                gap: 30px;
+
+                align-items: center;
+                justify-content: space-evenly;
+
+                .provedorUno,
+                .provedorDos,
+                .provedorTres {
+
+                    display: flex;
+                    width: 380px;
+                    height: 280px;
+                    border: solid grey 2px;
+
+                }
+
+                .provedorUno {
+                    @include proveedor()
+                }
+
+                .provedorUno>img {
+                    @include imagenes()
+                }
+
+                .provedorDos {
+                    @include proveedor()
+                }
+
+                .provedorDos>img {
+                    @include imagenes()
+                }
+
+                .provedorTres {
+                    @include proveedor()
+                }
+
+                .provedorTres>img {
+                    @include imagenes()
+                }
+            }
+        }
+
+        .secCuatro--modificador {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            border: gray solid 2px;
+            margin-top: 13rem;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+
+            .secCuatro__boxServicios--modificador {
+                display: flex;
+                width: 90%;
+                height: 350px;
+                gap: 30px;
+                align-items: center;
+
+                justify-content: space-evenly;
+
+                .servicioUno,
+                .servicioDos,
+                .servicioTres {
+
+                    display: flex;
+                    width: 380px;
+                    height: 280px;
+                    border: 2px solid gray;
+                }
+
+                .servicioUno {
+                    @include servicios()
+                }
+
+                .servicioUno>img {
+                    @include imagenes()
+                }
+
+                .servicioDos {
+                    @include servicios()
+                }
+
+                .servicioDos>img {
+                    @include imagenes()
+                }
+
+                .servicioTres {
+                    @include servicios()
+                }
+
+                .servicioTres>img {
+                    @include imagenes()
+                }
+
+            }
+
+
+
+
+        }
+
+
+
+    }
+
+
+}
+
+@media all and (max-width: 576px) {
+
+    body {
+        min-width: auto;
+
+        header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        main {
+            .secUno--modificador {
+                margin-top: 150px;
+            }
+
+            .secDos--modificador {
+                flex-direction: column;
+                height: auto;
+
+
+                .boxNecesidades--modificador {
+                    display: flex;
+                    flex-direction: column;
+                    height: auto;
+                }
+
+            }
+
+            .secTres--modificador {
+                height: auto;
+                flex-direction: column;
+                gap: px;
+
+                .secTres__boxProvedores--modificador {
+                    width: auto;
+                    height: auto;
+                    flex-direction: column;
+                }
+
+
+            }
+
+            .secCuatro--modificador {
+                width: auto;
+                height: auto;
+                flex-direction: column;
+
+                .secCuatro__boxServicios--modificador {
+                    width: auto;
+                    height: auto;
+                    flex-direction: column;
+                }
+            }
+
+        }
+
+        footer {
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+
+            .descripcionDos,
+            .descripcionUno,
+            .descripcionTres {
+                width: auto;
+                flex-direction: column;
+            }
+        }
+    }
+
+}
+
+@media all and (max-width: 780px) {
+    body {
+        min-width: auto;
+
+        header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        main {
+            .secUno--modificador {
+                margin-top: 150px;
+            }
+
+            .secDos--modificador {
+                flex-direction: column;
+                height: auto;
+
+
+                .boxNecesidades--modificador {
+                    display: flex;
+                    flex-direction: column;
+                    height: auto;
+                }
+
+            }
+
+            .secTres--modificador {
+                height: auto;
+                flex-direction: column;
+
+                .secTres__boxProvedores--modificador {
+                    width: auto;
+                    height: auto;
+                    flex-direction: column;
+                }
+
+
+            }
+
+            .secCuatro--modificador {
+                width: auto;
+                height: auto;
+                flex-direction: column;
+
+                .secCuatro__boxServicios--modificador {
+                    width: auto;
+                    height: auto;
+                    flex-direction: column;
+                }
+            }
+
+        }
+
+        footer {
+            width: auto;
+            display: flex;
+
+            .descripcionDos,
+            .descripcionUno,
+            .descripcionTres {
+                width: auto;
+                flex-direction: column;
+            }
+        }
+    }
+
+}
